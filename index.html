@@ -23,7 +23,7 @@
     --company-street: "Roswithastraße 28";
     --company-city: "45131 Essen";
     --company-email: "stephan.vila@cream-collection.de";
-    --company-main-url: "https://www.cream-collection.de";
+    --company-main-url: https://www.cream-collection.de;
     --company-logo-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/59b84de7-525d-4992-99ec-ac57b73c25b6/image-640x211.png");
     --clara-image-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/8b4f2525-c964-461b-a6a9-daa9ef61f180/l0,t0,w482,h410/image-240x204.jpg");
   
@@ -36,6 +36,7 @@
     --company-font-weight: 300;
     
     --primary-company-border-radius: 8px;
+    --primary-company-button-border-radius: 8px;
     --company-font-size-title: 27px;
     --company-font-size-subtitle: 18px;
     --company-font-size-text: 18px;
@@ -228,8 +229,8 @@
 
 
 
-  /* ########################creamco########################
-  
+  /* ########################creamco######################## 
+
   
   :root {
   
@@ -238,7 +239,7 @@
     --company-street: "Roswithastraße 28";
     --company-city: "45131 Essen";
     --company-email: "stephan.vila@cream-collection.de";
-    --company-main-url: "https://www.cream-collection.de";
+    --company-main-url: https://www.cream-collection.de;
     --company-logo-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/59b84de7-525d-4992-99ec-ac57b73c25b6/image-640x211.png");
     --clara-image-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/8b4f2525-c964-461b-a6a9-daa9ef61f180/l0,t0,w482,h410/image-240x204.jpg");
   
@@ -251,6 +252,7 @@
     --company-font-weight: 300;
     
     --primary-company-border-radius: 8px;
+    --primary-company-button-border-radius: 8px;
     --company-font-size-title: 27px;
     --company-font-size-subtitle: 18px;
     --company-font-size-text: 18px;
@@ -260,7 +262,7 @@
     --primary-company-color: #3FA6C7;
     --secondary-company-color: #D87A92;
     --tertiary-company-color: #707B84;
-    --primary-company-color-dark: #000;
+    --primary-company-color-dark: #3FA6C7;
     --secondary-company-color-dark: #3FA6C7;
     --primary-company-color-light: #fff;
     --secondary-company-color-light: #f1f2f3;
@@ -434,10 +436,10 @@
 
 
 
- ########################customer ######################## */
+  ########################customer ######################## */
 
 
-/* ########################Creditreform München########################*/
+/* ########################Creditreform München######################## */
   
   
 :root {
@@ -644,7 +646,7 @@
 
 
 
- /* ########################customer ######################## */
+/*  ########################customer ######################## */
     
     
     
@@ -677,7 +679,7 @@
   /* ++++++++++++++++++++++++ Anwendung Chati free ++++++++++++++++++++++++ */
   
   :root {
-  --rules-context: Sales; 
+  --rules-context: SchuldnerGlobal; 
   }
   
   html, body {
@@ -1115,138 +1117,14 @@
 
 
   
-   /* ++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
-  
-  
-  
-  
-  
-  
-  /* ++++++++++++++++++++++++ Anwendung Chati ++++++++++++++++++++++++ 
-  
-  :root {
-  --rules-context: ChatbotConsumer; 
-  }
-  
-  #logo-header {
-      display: none;
-  }
-  
-  #footer {
-      display: none;
-  }
-  
-  #title-container {
-    display: flex;
-  }
-  
-  .title-content .custom0c-p {
-    display: none;
-  }
-  
-  #clara-image {
-    display: block;
-  }
-  
-  
-  #factoring-section-container {
-    display: none;
-  }
-  
-  #factoring-instant-answer-dialog-button-container {
-    display: none;
-  }
-  
-  
-  
-  @media screen and (max-width: 850px) {
-  
-      #title-container {
-          width: 100%;
-          padding: 0px;
-          margin: 0px;
-  
-      }
-  
-      .title-content {
-          width: 100%;
-          padding: 0px;
-          margin: 0px;
-      }
-  
-      .title-content .custom0a-p {
-          margin-left: 0px;
-  
-      }
-  
-      .title-content .custom0b-p {
-          display: none;
-  
-      }
-  
-      .title-content .custom0c-p {
-          color: var(--primary-font-color);
-          font-size: var(--media-font-size-subtitle);
-          hyphens: auto;
-          word-wrap: break-word;  
-          margin-left: 0px;
-       }
-  
-      #clara-image {
-          display: none;
-          width: 0 !important;
-          height: 0 !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          visibility: hidden !important;
-          opacity: 0 !important;
-      }
-  }
-  
-  
-  #contact-form-title-container {
-    display: none;
-  }
-  
-  
-  #contact-form-container {
-    display: none;
-  }
-  
-  #input-button-container {
-    display: none;
-  }
-  
-  
-  #back-to-outlook-container {
-    display: none;
-  }
-  
-  
-  #chatbot-container {
-    display: flex;
-    margin-top: 10px;
-  }
-  
-  #instant-answer-dialog-button-container {
-    display: none;
-  }
-  
-  .icon4 {
-      display: none;
-  }
-  
-  
-  
-    ++++++++++++++++++++++++ ENDE Anwendung Chati ++++++++++++++++++++++++ */
-  
+/* ++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
   
   
   
   /* ++++++++++++++++++++++++ Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
   
   :root {
-  --rules-context: ChatbotContact; 
+  --rules-context: SchuldnerGlobal; 
   }
   
   
@@ -2041,13 +1919,13 @@
   
   
   
- ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ */
+  ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ */
   
   
   /* ++++++++++++++++++++++++ Anwendung Chatbot für Factoring ++++++++++++++++++++++++ 
   
   :root {
-  --rules-context: ChatbotContactFactoring; 
+  --rules-context: RechnungsempfängerGlobal; 
   }
   
   
@@ -5459,7 +5337,7 @@
   
   
   <div id="logo-header">
-      <a href="https://www.creditreform.de/muenchen" target="_blank">
+      <a href="https://www.cream-collection.de" target="_blank">
       <div id="company-logo" alt="Company Logo">
       </div>    
       </a>
@@ -6574,7 +6452,7 @@
           errorElement.innerHTML = `
             <p>Leider konnte ich Ihre Anfrage aufgrund einer Verbindungsstörung oder Zeitüberschreitung noch nicht beantworten. Bitte versuchen Sie es erneut oder wenden Sie sich an den Kundenservice.</p>
             <p></p>
-            <a href=\"#\" id=\"FmpRateT\" class=\"send-email-link\"\">Erneut versuchen</a>
+            <a href=\"#\" id=\"other\" class=\"send-email-link\"\">Erneut versuchen</a>
           `;
           messagesElement.appendChild(errorElement);
   
@@ -7587,7 +7465,7 @@
           errorElement.innerHTML = `
             <p>Leider konnte ich Ihre Anfrage aufgrund einer Verbindungsstörung oder Zeitüberschreitung noch nicht beantworten. Bitte versuchen Sie es erneut oder wenden Sie sich an den Kundenservice.</p>
             <p></p>
-            <a href=\"#\" id=\"FmpRateT\" class=\"send-email-link\"\">Erneut versuchen</a>
+            <a href=\"#\" id=\"other\" class=\"send-email-link\"\">Erneut versuchen</a>
           `;
           messagesElement.appendChild(errorElement);
   
@@ -8433,7 +8311,7 @@ async function openConfirmationModal() {
 document.addEventListener('click', async function(event) {
     const target = event.target;
 
-    const allowedIds = ['FmpRateRP', 'WQ_A1', 'WQ_A2', 'WQ_A3', 'WQ_A4'];
+    const allowedIds = ['FmpRateRP', 'WQ_A1', 'sendEmail', 'WQ_A3', 'WQ_A4'];
 
     if (target.classList.contains('send-email-link') && allowedIds.includes(target.id)) {
         event.preventDefault(); // Standard-Link-Verhalten verhindern
@@ -8526,14 +8404,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   
-    function checkForSuggestedLink() {
-        const lastBotMessage = document.querySelector('.bot-message:last-child');
-        if (!lastBotMessage) {
-            console.warn('Keine .bot-message gefunden!');
-            return; // Beende die Funktion, wenn keine Nachricht vorhanden ist
-        }
-        updateInputState('.suggested-link');
-    }
+    //function checkForSuggestedLink() {
+    //    const lastBotMessage = document.querySelector('.bot-message:last-child');
+    //    if (!lastBotMessage) {
+    //        console.warn('Keine .bot-message gefunden!');
+    //        return; // Beende die Funktion, wenn keine Nachricht vorhanden ist
+    //    }
+    //    updateInputState('.suggested-link');
+    //}
+
 
     function checkForSendEmailLink() {
         const lastBotMessage = document.querySelector('.bot-message:last-child');
@@ -8541,8 +8420,34 @@ document.addEventListener("DOMContentLoaded", function () {
             console.warn('Keine .bot-message gefunden!');
             return;
         }
-        updateInputState('.send-email-link');
+
+        // Suche nach einem Link mit der Klasse 'send-email-link' innerhalb der letzten Bot-Nachricht
+        const sendEmailLink = lastBotMessage.querySelector('.send-email-link');
+        if (!sendEmailLink) {
+            console.warn('Kein send-email-link in der letzten Bot-Nachricht gefunden!');
+            return;
+        }
+
+        // Prüfen, ob die ID des Links ungleich "other" ist
+        if (sendEmailLink.id !== 'other') {
+            updateInputState('.send-email-link'); // Aufruf nur, wenn die ID nicht "other" ist
+        } else {
+            console.info('Die ID ist "other". updateInputState wird nicht aufgerufen.');
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Beobachte Änderungen im DOM (für neue bot-messages)
     const observer = new MutationObserver(() => {
@@ -8691,12 +8596,7 @@ function closeHelpModal(modalId) {
   //setInterval(createSnowflake, 100);
 
 
-
-
-
-
-
-  
+ 
   
   </script>
   </body>
