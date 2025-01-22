@@ -3,6 +3,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Chatbot</title>
+  <script>
+    if (!window.location.href.includes("nocache")) {
+      const separator = window.location.href.includes("?") ? "&" : "?";
+      const newUrl = window.location.href.split("#")[0] + separator + "nocache=" + new Date().getTime();
+      window.location.href = newUrl;
+    } else {
+      // Entfernen Sie den Parameter aus der Adresszeile nach dem Laden
+      const cleanUrl = window.location.href.split("?")[0];
+      window.history.replaceState(null, null, cleanUrl);
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
   
   <!-- Der Abruf von Google-Fonts darf nur im Kontext "Chati free" aktiviert sein! -->
@@ -88,6 +99,9 @@
   
     --primary-loader-color: var(--secondary-company-color);
     --secondary-loader-color: var(--primary-company-color);
+
+    --video-background-color: var(--secondary-company-color-light);
+    --video-border-color: var(--secondary-company-color-light);
     
   --theme-value-1-de: "Wer oder was ist Chati?";
   --theme-text-1-de: "Chati kennenlernen";
@@ -245,13 +259,14 @@
     --company-contact-url: https://www.cream-collection.de/kontakt;
     --company-logo-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/59b84de7-525d-4992-99ec-ac57b73c25b6/image-640x211.png");
     --clara-image-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/8b4f2525-c964-461b-a6a9-daa9ef61f180/l0,t0,w482,h410/image-240x204.jpg");
-    --start-video-url: "";
-  
+    --start-video-url: "https://player.vimeo.com/video/1049273356?h=59b9814105&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+
+ 
     --company-logo-width: 200px;
     --company-logo-height: 80px;
     --media-company-logo-width: 200px;
     --media-company-logo-height: 40px;
-  
+      
     --company-font-family: 'Quicksand', sans-serif;
     --company-font-weight: 300;
     
@@ -306,6 +321,9 @@
   
     --primary-loader-color: var(--secondary-company-color);
     --secondary-loader-color: var(--primary-company-color);
+
+    --video-background-color: var(--secondary-company-color-light);
+    --video-border-color: var(--secondary-company-color-light);
   
 --theme-value-1-de: "Bitte zeigen Sie mir eine aktuelle Forderungsaufstellung an.";
 --theme-text-1-de: "Forderungsaufstellung";
@@ -439,7 +457,8 @@
   }
 
 
-  ########################customer ######################## */
+
+ ########################customer ######################## */
 
 
 /* ########################Creditreform München######################## */
@@ -455,8 +474,9 @@
   --company-main-url: https://www.creditreform.de/muenchen;
   --company-contact-url: https://www.creditreform.de/muenchen/creditreform/kontakt;
   --company-logo-url: url("https://raw.githubusercontent.com/Rosendo99er/images/refs/heads/main/LogoCreditreformMuenchen.png");
-  --clara-image-url: url("https://raw.githubusercontent.com/Rosendo99er/images/refs/heads/main/iStock-2167773182-modified-8e1865b3-9c16-49bb-bd42-1a1fc824f9ff.jpg");
-  --start-video-url: "";
+  --clara-image-url: url("https://raw.githubusercontent.com/Rosendo99er/CrefoMucStandard/refs/heads/main/iStock-2167773181-modified-9e1a1859-29ee-4093-be3d-3d1a1bc98075.jpg");
+  --start-video-url: "https://player.vimeo.com/video/1049241820?h=fd16354182&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+
 
   --company-logo-width: 300px;
   --company-logo-height: 80px;
@@ -651,7 +671,7 @@
 
 
 
-/* ########################customer ######################## */
+ /* ########################customer ######################## */
     
     
     
@@ -671,7 +691,7 @@
   --company-main-url: https://www.creditreform.de/muenchen;
   --company-contact-url: https://www.creditreform.de/muenchen/creditreform/kontakt;
   --company-logo-url: url("https://raw.githubusercontent.com/Rosendo99er/images/refs/heads/main/LogoCreditreformMuenchen.png");
-  --clara-image-url: url("https://raw.githubusercontent.com/Rosendo99er/images/refs/heads/main/iStock-2167773182-modified-8e1865b3-9c16-49bb-bd42-1a1fc824f9ff.jpg");
+  --clara-image-url: url("https://raw.githubusercontent.com/Rosendo99er/CrefoMucStandard/refs/heads/main/iStock-2167773181-modified-9e1a1859-29ee-4093-be3d-3d1a1bc98075.jpg");
   --start-video-url: "https://www.youtube.com/embed/A0UWBc44Gws";
 
   --company-logo-width: 300px;
@@ -733,6 +753,9 @@
 
   --primary-loader-color: var(--secondary-company-color);
   --secondary-loader-color: var(--primary-company-color);
+
+  --video-background-color: var(--secondary-company-color-light);
+  --video-border-color: var(--secondary-company-color-light);
 
 --theme-value-1-de: "Wer ist Creditreform München? ";
 --theme-text-1-de: "Creditreform München";
@@ -1267,24 +1290,28 @@
     position: relative;
   }
   
+
+
   #video-container {
     width: 100%;
     max-height: 100%;
-    margin: 20px auto;
+    margin-top: 10px;
     overflow: hidden;
-    padding-top: 56.25%;
-    z-index: 1000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
   }
 
   iframe {
     position: absolute;
-    top: 0%;
+    top: 25%;
     left: 0%;
     width: 100%;
     height: 100%;
-    max-height: 100%;
     border: none;
   }
+
+
 
 
 }   
@@ -1320,11 +1347,13 @@
   
   
   #video-container {
-    width: 75%;
+    width: 100%;
     max-height: 100%;
-    margin: 20px auto;
+    margin-top: 10px;
     overflow: hidden;
-    padding-top: 56.25%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
   }
 
   iframe {
@@ -1333,12 +1362,11 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    max-height: 100%;
     border: none;
   }
 
 
-/* ++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
+ /* ++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
   
   
   /* ++++++++++++++++++++++++ Anwendung Chati Sales ++++++++++++++++++++++++ 
@@ -1351,24 +1379,23 @@
   
 
   #video-container {
-        width: 75%;
-        max-height: 100%;
-        margin: 20px auto;
-        overflow: hidden;
-        padding-top: 56.25%;
-    }
+    width: 100%;
+    max-height: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+  }
 
-
-
-    iframe {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        border: none;
-    }
+  iframe {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
   
   html, body {
@@ -1517,27 +1544,24 @@
   @media screen and (max-width: 850px) {
   
 
-    #video-container {
-        width: 100%;
-        max-height: 100%;
-        margin: 20px auto;
-        overflow: hidden;
-        padding-top: 56.25%;
-        z-index: 1000;
-    }
+  #video-container {
+    width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+  }
 
-  
-
-    iframe {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        border: none;
-    }
-
+  iframe {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
 
   
@@ -6174,7 +6198,15 @@
   
           </div>
   
-  
+          <div id="video-container">
+            <iframe 
+                id="video-frame"
+                src="" 
+                title="Video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+          </div>  
   
   
           <div id="chatbot-messages">
@@ -6190,15 +6222,7 @@
           </div>
   
   
-          <div id="video-container">
-            <iframe 
-                id="video-frame"
-                src="" 
-                title="YouTube video player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-          </div>
+
 
 
   
@@ -6278,11 +6302,15 @@
       try {
         import('./videoToggle.js')
             .then(({ toggleVideoContainer }) => {
+                const chatbotMessages = document.getElementById('chatbot-messages');
+                chatbotMessages.classList.add('hide-message');
+
                 // Event Listener hinzufügen, wenn das Modul erfolgreich geladen wurde
+                
                 document.getElementById('chatbot-consent-checkbox').addEventListener('change', function () {
                     const consentGiven = this.checked;
                     document.getElementById('chatbot-input').disabled = !consentGiven;
-
+                
                     // Video-Container sichtbar/unsichtbar machen
                     toggleVideoContainer(consentGiven);
                 });
@@ -7171,7 +7199,9 @@ document.getElementById('chatbot-consent-checkbox').addEventListener('change', f
       fullMessage = fullMessage.replace(/```/g, '');  // Entferne alle übrigen ```
       fullMessage = fullMessage.replace(/^\s*html\s*$/gm, '');  // Entferne "html", wenn es alleine in einer Zeile steht
   
-  
+      // Ersetze zusammengehörige Doppelsterne (**text**) durch <strong>text</strong>
+      fullMessage = fullMessage.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        
       // Zeige die empfangene Nachricht im Chatfenster an
       displayCleanedData(fullMessage);
   
